@@ -1,0 +1,316 @@
+/* Crack Story Archive — 원고지(原稿紙) 컨셉 랜딩
+   격자 = 글이 놓이는 자리. 주색(朱)은 커서 하나에만 쓴다. */
+
+:root{
+  --paper:#f1f3f0;      /* 원고지 종이 — 초록기 도는 흰색 */
+  --ink:#14181c;
+  --ink-2:#5b6470;
+  --ink-3:#98a0a8;
+  --grid:#c9d6c9;       /* 원고지 인쇄 초록 */
+  --rule:#dde0db;
+  --vermilion:#c4402e;  /* 朱 — 커서 전용 */
+  --cell:30px;          /* 원고지 칸 */
+
+  --font-display:"Hahmlet",serif;
+  --font-body:"IBM Plex Sans KR",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono","IBM Plex Sans KR",monospace;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#101312;
+    --ink:#edefea;
+    --ink-2:#9aa39c;
+    --ink-3:#5e6862;
+    --grid:#243028;
+    --rule:#232825;
+    --vermilion:#e0614c;
+  }
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-weight:300;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+
+a{color:inherit;text-decoration:none}
+
+:focus-visible{
+  outline:2px solid var(--vermilion);
+  outline-offset:4px;
+  border-radius:2px;
+}
+
+/* ─────────────────────────── HERO ─────────────────────────── */
+
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:6rem clamp(1.5rem,6vw,4rem) 3rem;
+  overflow:hidden;
+}
+
+/* 원고지 격자 — 히어로 뒤에만, 가장자리로 사라진다 */
+.hero__paper{
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(to right,var(--grid) 1px,transparent 1px),
+    linear-gradient(to bottom,var(--grid) 1px,transparent 1px);
+  background-size:var(--cell) var(--cell);
+  opacity:.55;
+  -webkit-mask-image:radial-gradient(115% 85% at 32% 42%,#000 0%,transparent 72%);
+  mask-image:radial-gradient(115% 85% at 32% 42%,#000 0%,transparent 72%);
+  pointer-events:none;
+}
+
+.hero__inner{
+  position:relative;
+  width:100%;
+  max-width:47rem;
+  margin-inline:auto;
+}
+
+/* 원고지 상단의 제목·성명 칸 */
+.sheet-head{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:.6rem 1.5rem;
+  padding-bottom:.9rem;
+  margin-bottom:2.4rem;
+  border-bottom:1px solid var(--rule);
+}
+.sheet-head__title{
+  font-family:var(--font-mono);
+  font-size:.68rem;
+  font-weight:500;
+  letter-spacing:.26em;
+  color:var(--ink-2);
+}
+.sheet-head__by{
+  font-family:var(--font-display);
+  font-size:.92rem;
+  font-weight:500;
+  letter-spacing:.02em;
+  color:var(--ink);
+}
+.sheet-head__label{
+  font-family:var(--font-mono);
+  font-size:.62rem;
+  font-weight:400;
+  letter-spacing:.2em;
+  color:var(--ink-3);
+  margin-right:.7em;
+}
+
+/* 크랙 표기법 그대로의 나레이션 한 줄 */
+.opening{
+  font-family:var(--font-display);
+  font-weight:500;
+  font-size:clamp(1.9rem,6.4vw,4.1rem);
+  line-height:1.42;
+  letter-spacing:-.022em;
+  word-break:keep-all;
+}
+
+/* 별표는 장식이 아니라 실제 문법이라 모노로 노출 */
+.mark{
+  font-family:var(--font-mono);
+  font-weight:400;
+  color:var(--ink-3);
+  font-size:.62em;
+  vertical-align:.14em;
+  margin-inline:.04em;
+}
+
+.caret{
+  display:inline-block;
+  width:.5ch;
+  height:.92em;
+  margin-left:.12em;
+  vertical-align:-.08em;
+  background:var(--vermilion);
+  animation:blink 1.15s step-end infinite;
+}
+
+@keyframes blink{50%{opacity:0}}
+
+.lede{
+  margin-top:2.2rem;
+  max-width:34rem;
+  color:var(--ink-2);
+  font-size:clamp(.94rem,1.5vw,1.02rem);
+  word-break:keep-all;
+}
+
+.cue{
+  position:relative;
+  align-self:flex-start;
+  width:100%;
+  max-width:47rem;
+  margin:5rem auto 0;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  letter-spacing:.18em;
+  color:var(--ink-3);
+  transition:color .25s ease;
+}
+.cue__rule{
+  flex:1;
+  height:1px;
+  background:var(--rule);
+  transition:background .25s ease;
+}
+.cue:hover{color:var(--ink)}
+.cue:hover .cue__rule{background:var(--ink-3)}
+
+/* ────────────────────────── WORKS ────────────────────────── */
+
+.works{
+  max-width:47rem;
+  margin-inline:auto;
+  padding:clamp(4rem,11vw,7rem) clamp(1.5rem,6vw,4rem);
+}
+
+.section-head{
+  display:flex;
+  align-items:baseline;
+  gap:.9rem;
+  padding-bottom:1.4rem;
+  border-bottom:1px solid var(--ink);
+  margin-bottom:0;
+}
+.section-head__ko{
+  font-family:var(--font-display);
+  font-size:1.12rem;
+  font-weight:600;
+  letter-spacing:.04em;
+}
+.section-head__en{
+  font-family:var(--font-mono);
+  font-size:.66rem;
+  font-weight:500;
+  letter-spacing:.24em;
+  color:var(--ink-3);
+}
+
+/* 카드가 아니라 목차 항목 */
+.entry{
+  display:block;
+  padding:2.6rem 0 2.8rem;
+  border-bottom:1px solid var(--rule);
+  transition:padding-left .3s cubic-bezier(.22,.61,.36,1);
+}
+.entry:hover,
+.entry:focus-visible{padding-left:.85rem}
+
+.entry__meta{
+  font-family:var(--font-mono);
+  font-size:.67rem;
+  font-weight:400;
+  letter-spacing:.13em;
+  color:var(--ink-3);
+  margin-bottom:1rem;
+}
+
+.entry__title{
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:clamp(1.6rem,4.6vw,2.35rem);
+  line-height:1.28;
+  letter-spacing:-.02em;
+}
+
+.entry__tagline{
+  margin-top:.6rem;
+  color:var(--ink);
+  font-size:clamp(.95rem,1.6vw,1.05rem);
+  font-weight:400;
+  word-break:keep-all;
+}
+
+.entry__desc{
+  margin-top:1rem;
+  max-width:36rem;
+  color:var(--ink-2);
+  font-size:.93rem;
+  word-break:keep-all;
+}
+
+.entry__go{
+  display:inline-block;
+  margin-top:1.6rem;
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.14em;
+  color:var(--ink);
+  border-bottom:1px solid var(--rule);
+  padding-bottom:.3rem;
+  transition:border-color .25s ease;
+}
+.entry__arrow{
+  display:inline-block;
+  margin-left:.7em;
+  transition:transform .3s cubic-bezier(.22,.61,.36,1);
+}
+.entry:hover .entry__go{border-bottom-color:var(--vermilion)}
+.entry:hover .entry__arrow{transform:translateX(5px)}
+
+.pending{
+  margin-top:2.4rem;
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.1em;
+  color:var(--ink-3);
+}
+
+/* ────────────────────────── FOOTER ────────────────────────── */
+
+.foot{
+  max-width:47rem;
+  margin-inline:auto;
+  padding:2.5rem clamp(1.5rem,6vw,4rem) 4rem;
+  border-top:1px solid var(--rule);
+}
+.foot__name{
+  font-family:var(--font-display);
+  font-size:.92rem;
+  font-weight:500;
+}
+.foot__note{
+  margin-top:.3rem;
+  font-family:var(--font-mono);
+  font-size:.68rem;
+  letter-spacing:.06em;
+  color:var(--ink-3);
+}
+
+/* ───────────────────────── MOTION OFF ───────────────────────── */
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+  .caret{opacity:1}
+}
