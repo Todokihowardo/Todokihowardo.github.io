@@ -82,31 +82,23 @@ strong {
   z-index: 1
 }
 
-.hero__kicker {
-  font-family: Orbitron, sans-serif;
-  letter-spacing: .42em;
-  font-size: .72rem;
-  color: var(--acc);
-  margin-bottom: 1.4rem;
-  padding-left: .42em;
+/* 타이틀 로고 — 텍스트 조판을 대체. 폭은 뷰포트 기준, 상한은 원본 해상도 */
+.hero__logo {
+  margin: 0 auto;
+  line-height: 0;
 }
 
-.hero__title {
-  font-family: Orbitron, sans-serif;
-  font-weight: 800;
-  line-height: .92;
-  font-size: clamp(3rem, 13vw, 7.5rem);
-  letter-spacing: .02em;
-}
-
-.hero__title span {
+.hero__logo img {
   display: block;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 900;
-  font-size: clamp(1.1rem, 4.4vw, 2.4rem);
-  letter-spacing: .2em;
-  color: var(--ink2);
-  margin-top: .6rem;
+  margin-inline: auto;
+  width: min(88vw, 34rem);
+  height: auto;
+  filter: drop-shadow(0 12px 34px rgba(0, 0, 0, .55));
+}
+
+/* 라이트 테마에선 은색 면이 흰 배경에 묻히므로 대비를 살짝 세운다 */
+:root[data-theme="light"] .hero__logo img {
+  filter: drop-shadow(0 10px 26px rgba(18, 22, 32, .28)) contrast(1.06);
 }
 
 .hero__tag {
