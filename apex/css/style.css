@@ -338,7 +338,28 @@ th.pts{text-align:right}
 .foot__in{display:flex;flex-wrap:wrap;gap:1.4rem;align-items:flex-start}
 .foot .brand{color:rgba(242,245,246,.92)}
 .foot p{font-size:.78rem;max-width:46ch;word-break:keep-all}
-.foot .disc{margin-left:auto;font-family:var(--f-mono);font-weight:400;font-size:.6rem;letter-spacing:.1em;color:rgba(242,245,246,.32);text-align:right;line-height:1.9}
+.foot .disc{font-family:var(--f-mono);font-weight:400;font-size:.6rem;letter-spacing:.1em;color:rgba(242,245,246,.32);text-align:right;line-height:1.9}
+/* 스토리로 나가는 유일한 출구 — 타이틀 로고를 눌러 크랙으로 */
+.foot__cta{
+  margin-left:auto;display:flex;align-items:center;justify-content:flex-end;
+  gap:1.2rem;flex-wrap:wrap;
+}
+.foot__title{
+  flex:none;display:block;text-align:center;
+  transition:transform .22s cubic-bezier(.2,.7,.3,1),opacity .22s;
+}
+.foot__title img{width:clamp(132px,15vw,176px);height:auto}
+.foot__title span{
+  display:block;margin-top:.5rem;
+  font-family:var(--f-mono);font-weight:500;font-size:.6rem;letter-spacing:.12em;
+  color:var(--acc);
+}
+.foot__title:hover{transform:translateY(-2px)}
+.foot__title:hover span{color:#fff}
+@media(max-width:700px){
+  .foot__cta{margin-left:0;justify-content:flex-start;width:100%}
+  .foot .disc{text-align:left}
+}
 
 /* ─── 라이트박스 ─── */
 .lb{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:4vmin;background:rgba(5,8,10,.94);cursor:zoom-out}
