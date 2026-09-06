@@ -62,7 +62,11 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
    높이는 Archivo 캡높이(275/400 = .6875em), 폭은 viewBox 비율로 자동. */
 .brand__slash{
   height:.6875em;width:auto;display:inline-block;vertical-align:baseline;
-  margin-right:.052em;          /* 사선과 델타 사이 간격 */
+  margin-right:.028em;          /* 사선↔델타 채널.
+     글자 사이 최소 잉크 간격은 A→P .0875 / P→E .1025 / E→X .06em 이지만,
+     그 값들은 한 지점에서만 좁고 위로 벌어진다. 사선과 델타는 빗변이
+     평행해 채널이 캡높이 전체에 균일하므로, 같은 수치면 훨씬 넓어 보인다.
+     실제 렌더를 비교해 앞뒤 글자 리듬과 맞는 값으로 잡았다. */
 }
 .brand__a{
   height:.6875em;width:auto;display:inline-block;vertical-align:baseline;
