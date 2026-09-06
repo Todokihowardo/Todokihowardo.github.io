@@ -1,215 +1,665 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="dark">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APEX 그랑프리 아시아 — 세계관</title>
+<title>APEX GRAND PRIX — ASIA SERIES 공식</title>
+<meta name="description" content="APEX 그랑프리 아시아 시리즈 공식 사이트 — 뉴스, 드라이버 순위, 캘린더, 참가 팀, AERO 규정.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Noto+Sans+KR:wght@400;700;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero__grid"></div>
-  <div class="hero__inner">
-    <h1 class="hero__logo">
-      <img src="title.webp" width="1080" height="661" fetchpriority="high"
-           alt="APEX 그랑프리 — Aero Precision Extreme: Asia Off The Record">
-    </h1>
-    <p class="hero__tag">레이더가 꺼진 하늘, 승부는 <em>기체</em>가 아니라 <strong>사람</strong>이 가른다.</p>
-    <div class="hero__scroll">SCROLL ↓</div>
+<!-- 로고: 초록 사선 / + 흰 델타 ∧ , 델타가 워드마크의 A 를 그대로 대체한다.
+     Archivo 800 'A' 를 픽셀 실측해 정점을 옮겨 왔다 — 캡275 : 잉크292,
+     꼭짓점 x103~189, 바깥 빗변 기울기 -103/275, 카운터 꼭짓점 (144.5,62).
+     크로스바(y174~227)만 빼면 델타익이 된다.
+     사선은 A 의 왼쪽 바깥 빗변과 기울기가 완전히 같다(103:275). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="apexSlash" viewBox="0 0 157 275">
+    <path d="M0,275 L103,0 L157,0 L54,275 Z" fill="#00c06a"/>
+  </symbol>
+  <symbol id="apexA" viewBox="0 0 292 275">
+    <path d="M0,275 L103,0 L189,0 L292,275 L216,275 L144.5,62 L73,275 Z" fill="currentColor"/>
+  </symbol>
+</defs></svg>
+
+<!-- ══════════ 네비 ══════════ -->
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="APEX GRAND PRIX 홈">
+      <span class="brand__word" aria-label="APEX"><svg class="brand__slash" viewBox="0 0 157 275" aria-hidden="true"><use href="#apexSlash"></use></svg><svg class="brand__a" viewBox="0 0 292 275" aria-hidden="true"><use href="#apexA"></use></svg>PEX</span>
+      <span class="brand__lock">GRAND<br>PRIX</span>
+      <span class="brand__sub">ASIA SERIES</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#news">NEWS</a>
+      <a href="#standings">STANDINGS</a>
+      <a href="#calendar">CALENDAR</a>
+      <a href="#teams">COMPETITORS</a>
+      <a href="#regs">REGULATIONS</a>
+    </nav>
   </div>
 </header>
 
-<main>
-
-<!-- APEX GP란 -->
-<section class="sec" id="about">
-  <div class="sec__wrap">
-    <p class="sec__label">01 — WHAT IS APEX</p>
-    <h2>하늘을 건 대리전</h2>
-    <div class="prose">
-      <p>가장 긴 평화가, 가장 날카로운 칼을 녹슬게 했다.</p>
-      <p>20여 년, 하늘에서 총성이 사라졌다. 축복이었지만 각국의 방산 기술에는 조용한 사형 선고이기도 했다. 실전이라는 유일한 채점표가 사라지자 개발은 방향을 잃었고, 세대를 거듭할수록 <strong>투입되는 연구비는 천문학적으로 불어나는데 성능의 도약은 소수점 아래로 쪼그라들었다</strong>. 다음 전투기는 이전 것보다 그저 조금 비싸고 조금 나을 뿐이었다.</p>
-      <p>쓸 일도, 팔릴 일도 없는 무기 앞에서 시장은 얼어붙었다. 수주가 끊긴 기업들은 생산 라인을 멈췄고 숙련된 엔지니어들이 흩어졌으며, 수십 년의 설계 노하우가 캐비닛 속에서 잠들었다. 한 세대만 더 이대로 흐르면 각국은 스스로 전투기를 그릴 능력 자체를 잃을 참이었다 — 그리고 <em>제 손으로 무기를 만들지 못하는 나라는, 제 하늘도 지키지 못한다</em>.</p>
-      <p>그래서 어제까지 서로를 겨누던 자들이 한 테이블에 앉았다. 마주 겨눈 기술을 녹슬게 두느니 맞붙여 벼리자는 위험한 합의. 실전의 모든 압력을 — 오직 죽음 하나만 덜어낸 채 — 그대로 하늘에 옮겨 심은 무대. 경쟁국들이 손을 잡고 공동으로 창설한 그 대리전의 이름이 <strong>APEX Grand Prix</strong><span class="expand">(Aero Precision Extreme Grand Prix)</span>이다.</p>
-      <p>이곳에서의 승리는 트로피가 아니라 <strong>카탈로그</strong>다. 한 번의 우승이 조 단위 방산 계약을 흔들고, 정체됐던 기술에 다시 예산과 두뇌를 끌어온다. 각국이 최정예 에이스와 최신예 기체를 아낌없이 밀어 넣는 이유가 여기 있다 — 이 하늘에서의 순위가 곧 다음 세대 국방력의 순위이자, 국가의 자존심이기 때문이다.</p>
+<!-- ══════════ 히어로 ══════════ -->
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true"><img src="p/0.webp" alt=""></div>
+  <div class="wrap hero__in">
+    <span class="tagpill">ASIA SERIES · ROUND 1 개막</span>
+    <h1>하늘은 평등하게.<br>정점은 <em>인간</em>에게.</h1>
+    <p class="hero__slogan">EQUAL SKIES &middot; HUMAN APEX</p>
+    <p class="hero__lede">
+      APEX 그랑프리는 실전이 사라진 하늘에서 항공 기술이 스스로 멈추는 것을 막기 위해,
+      어제까지 서로를 겨누던 나라들이 함께 창설한 국제 경기입니다.
+      모든 참가기는 <strong>AERO 규정</strong> 아래 성능이 평준화되고, 남는 것은 오직
+      조종하는 사람의 기량입니다.
+      <strong>아시아 &middot; 유럽 &middot; 아메리카</strong> 세 지역 시리즈의 챔피언만이
+      월드 시리즈에 오릅니다.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--fill" href="#calendar">시즌 캘린더</a>
+      <a class="btn" href="#teams">참가 팀 보기</a>
     </div>
   </div>
 </section>
 
-<!-- AERO -->
-<section class="sec sec--alt" id="aero">
-  <div class="sec__wrap">
-    <p class="sec__label">02 — THE RULE</p>
-    <h2>밸런스 프로토콜</h2>
-    <div class="prose">
-      <p>기체의 성능 차이는 절대적이다. 5세대 스텔스기와 4세대 전투기가 정면으로 붙으면, 승부는 이륙 전에 끝나 있다. 그래서 대회는 세 개의 족쇄를 채운다.</p>
+<div class="nextup">
+  <div class="wrap nextup__in">
+    <b>NEXT RACE</b>
+    <span>R1 · 코리아 그랑프리 &lsquo;이스턴 게일&rsquo;</span>
+    <span class="sep">|</span><span>제주 남방 해상 서킷</span>
+    <span class="sep">|</span><span>3월</span>
+  </div>
+</div>
+
+<!-- ══════════ 뉴스 ══════════ -->
+<section class="sec" id="news">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>최신 소식</h2><span class="en">LATEST NEWS</span>
+      <span class="more">APEX MEDIA CENTRE</span>
     </div>
-    <div class="cards3">
-      <div class="mini"><h3>AGWR<span class="full">Adaptive G–Wingload Regulation</span></h3><p>모든 기체에 통제 포드가 강제된다. 중량과 익면적을 실시간 계산해 최대 G를 소프트웨어로 눌러버린다. 세대의 격차는 사라지고, 남는 것은 <em>에너지 관리</em>와 조종술뿐.</p></div>
-      <div class="mini"><h3>TCE<span class="full">Theater Communications Embargo</span></h3><p>경기장 전역에 광대역 재밍이 쏟아진다. 관제 채널 하나를 뺀 모든 데이터링크·GPS·자동조준이 마비된다. 파일럿에게 남은 데이터는 치프의 무전 하나.</p></div>
-      <div class="mini"><h3>VEIL<span class="full">Vision-Enforced Instrument Lockout</span></h3><p>센서 퓨전이 무력화된다. 아날로그 계기와 공간각, 그리고 캐노피 밖을 직접 보는 두 눈 — 육안 비행만으로 가상 대공망을 피하고 타겟을 무력화해야 한다.</p></div>
+    <div class="news">
+
+      <article class="card card--lead">
+        <div class="card__img">
+          <img src="c/6/1/1.webp" alt="류자키 린">
+          <span class="card__tag">FEATURE</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">2월 28일 · 후지</p>
+          <h3>무패의 챔피언, 세 번째 왕관을 향해 — 류자키 린 &lsquo;Orochi&rsquo;</h3>
+          <p>지난 시즌 전 라운드 우승. 항자대 제6비행대의 에이스는 아시아 시리즈 역사상 처음으로
+             무패 시즌을 완성했다. 개막을 앞둔 인터뷰에서 그는 승리에 대해 이야기하지 않았다.</p>
+          <p class="card__quote">&ldquo;후후… 이기는 건 이제 예정된 일이잖아요. 저는 그저,
+             제 앞을 막아설 분이 한 명이라도 계셨으면 하는 것뿐입니다.&rdquo;</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="j/0.webp" alt="KF-21 보라매">
+          <span class="card__tag card__tag--dark">ENTRY</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">3월 2일 · 서울</p>
+          <h3>신규 엔트리 승인 — 대한민국 공군 제18전투비행단, KF-21 보라매로 참전</h3>
+          <p>아시아 시리즈가 네 팀에서 다섯 팀 체제로 확대된다. 사무국은 18전비의 엔트리를 승인했으나,
+             파일럿과 치프 엔지니어 명단은 개막 직전까지 비공개로 남았다.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="c/2/1/8.webp" alt="강태산">
+          <span class="card__tag">TEAM</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">2월 24일 · 대구</p>
+          <h3>강태산, 은퇴설 일축 &ldquo;물러날 자리는 내가 정한다&rdquo;</h3>
+          <p>11전비의 최고참은 최근 불거진 은퇴설에 짧게 답했다. 팀 관계자는 그가 올 시즌
+             유난히 신인 명단을 자주 확인했다고 전했다.</p>
+          <p class="card__quote">&ldquo;…어설픈 궤적은 내가 부숴주지. 그게 후배한테 해줄 수 있는 전부다.&rdquo;</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="c/4/1/6.webp" alt="잭 밀러">
+          <span class="card__tag card__tag--alert">EXCLUSIVE</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">2월 19일 · 요코스카</p>
+          <h3>잭 밀러, 착함 사고 관련 질문에 회견장 이탈</h3>
+          <p>VFA-27의 에이스는 늘 웃는 얼굴로 취재진을 상대해 왔다. 그러나 3년 전 항모 착함
+             사고를 묻는 질문이 나오자, 농담을 멈추고 자리를 떴다. 팀 치프 사라 젠킨스는
+             &ldquo;다음 질문&rdquo;이라는 말로 회견을 닫았다.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="c/8/1/9.webp" alt="리 슈에">
+          <span class="card__tag">TECH</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">2월 15일 · 베이징</p>
+          <h3>리 슈에, J-20 능동재밍 세팅 재검토 요청 — &ldquo;부품처럼 굴러가진 않겠다&rdquo;</h3>
+          <p>PLAAF 제1항공여단은 사무국에 EW 운용 범위 유권해석을 요청했다. 정중한 문장 사이에
+             날카로운 문구가 섞여 있었다는 것이 관계자들의 전언이다.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="p/2.webp" alt="상하이 네온 캐니언">
+          <span class="card__tag">CIRCUIT</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">2월 11일 · 상하이</p>
+          <h3>R3 &lsquo;네온 캐니언&rsquo; 코스 개정 — 빌딩풍 구간 안전 마진 확대</h3>
+          <p>지난 시즌 유리 반사로 인한 시야 교란 사고가 잇따르자, 사무국은 마천루 협곡 구간의
+             통과 폭을 넓혔다. 파일럿들은 &ldquo;여전히 좁다&rdquo;는 반응이다.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="c/3/1/1.webp" alt="박정화">
+          <span class="card__tag">PADDOCK</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">2월 6일 · 대구</p>
+          <h3>치프 엔지니어 좌담 &mdash; &ldquo;무전 한 채널이 곧 계기판입니다&rdquo;</h3>
+          <p>TCE 재밍 아래 파일럿에게 남는 유일한 데이터는 치프의 목소리다. 11전비 박정화 반장은
+             &ldquo;그래서 우리는 숫자를 말하지, 걱정을 말하지 않는다&rdquo;고 했다.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__img">
+          <img src="c/7/1/0.webp" alt="사토미 유우">
+          <span class="card__tag card__tag--alert">STEWARDS</span>
+        </div>
+        <div class="card__body">
+          <p class="card__date">1월 30일 · 사무국</p>
+          <h3>판례 재확인 — 통제 포드 봉인 훼손은 즉시 실격</h3>
+          <p>지난 시즌 G리미트를 해제하고 한계 선회를 감행한 파일럿은 실격과 2GP 출전 정지를 받았다.
+             사무국은 개막을 앞두고 같은 판례를 다시 공지했다.</p>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- 아시아 시리즈 + 당신 -->
-<section class="sec" id="asia">
-  <div class="sec__wrap">
-    <p class="sec__label">03 — THE ASIA SERIES</p>
-    <h2>동북아의 하늘, 그리고 당신</h2>
-    <div class="prose">
-      <p>월드 시리즈는 멀다. 그 문턱에, 동북아 다섯 팀이 겨루는 지역 시리즈가 있다. 3월 제주의 해무에서 시작해 9월 동해의 공해상 결승까지 — 일곱 번의 그랑프리. 다섯 기의 전투기가 매번 같은 그리드에 서고, 시즌 챔피언에게는 단 하나, <strong>월드 시리즈 승격 티켓</strong>이 주어진다.</p>
-      <p>그리고 그 그리드 맨 뒤, 아무도 주목하지 않는 자리에 <strong>당신</strong>이 있다.</p>
-      <p>대한민국 공군 제18전투비행단의 루키. 국산 5세대 전투기 <strong>KF-21 보라매</strong>의 역사적인 첫 참전을 등에 업은, 전례도 통계도 없는 무명의 도전자. 옆에는 욕설로 무전을 채우는 전담 치프 권유진이 있고, 앞에는 무패의 챔피언과 야수 같은 베테랑들이 있다.</p>
-      <p>당신이 증명해야 할 것은 단 하나 — 낡은 편견을 뚫고, 이 하늘이 누구의 것인지.</p>
+<!-- ══════════ 순위표 ══════════ -->
+<section class="sec sec--alt" id="standings">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>드라이버 순위</h2><span class="en">DRIVER STANDINGS</span>
+      <span class="more">지난 시즌 최종</span>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>POS</th><th>파일럿</th><th>팀 · 기체</th><th>WIN</th><th class="pts">PTS</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="pos pos--1">1</td>
+            <td><div class="drv"><img src="c/6/1/1.webp" alt="류자키 린">
+              <span><b>류자키 린</b><small>OROCHI · JPN</small></span></div></td>
+            <td>항자대 제6비행대 · F-2</td><td>7</td><td class="pts">175</td>
+          </tr>
+          <tr>
+            <td class="pos">2</td>
+            <td><div class="drv"><img src="c/8/1/0.webp" alt="리 슈에">
+              <span><b>리 슈에</b><small>MANTIS · CHN</small></span></div></td>
+            <td>PLAAF 제1항공여단 · J-20</td><td>0</td><td class="pts">118</td>
+          </tr>
+          <tr>
+            <td class="pos">3</td>
+            <td><div class="drv"><img src="c/4/1/1.webp" alt="잭 밀러">
+              <span><b>잭 밀러</b><small>ROULETTE · USA</small></span></div></td>
+            <td>VFA-27 · F/A-18E</td><td>0</td><td class="pts">92</td>
+          </tr>
+          <tr>
+            <td class="pos">4</td>
+            <td><div class="drv"><img src="c/2/1/0.webp" alt="강태산">
+              <span><b>강태산</b><small>ANVIL · KOR</small></span></div></td>
+            <td>11전비 · F-15K</td><td>0</td><td class="pts">71</td>
+          </tr>
+          <tr class="row--tbd">
+            <td class="pos">&mdash;</td>
+            <td><div class="drv"><span class="qm">?</span>
+              <span><b>???</b><small>UNREGISTERED · KOR</small></span></div></td>
+            <td>18전비 · KF-21</td><td>&mdash;</td><td class="pts">&mdash;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">
+      지난 시즌은 4개 팀 체제로 치러졌습니다. 18전비는 이번 시즌 신규 엔트리로,
+      데뷔전을 치르기 전까지 순위에 집계되지 않습니다.
+      · 배점 1위 25 / 2위 18 / 3위 12 / 4위 8 / 5위 4
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ 캘린더 ══════════ -->
+<section class="sec" id="calendar">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>시즌 캘린더</h2><span class="en">CALENDAR</span><span class="more">7 ROUNDS</span>
+    </div>
+    <div class="cal">
+      <div class="rnd rnd--next">
+        <div class="rnd__no">ROUND<b>01</b></div>
+        <div class="rnd__img"><img src="p/0.webp" alt="제주 남방 해상 서킷"></div>
+        <div class="rnd__name">코리아 그랑프리 &lsquo;이스턴 게일&rsquo;<em>EASTERN GALE · JEJU SOUTH OFFSHORE</em></div>
+        <div class="rnd__meta"><b>3월</b>해무 · 초저공 · 개막전</div>
+      </div>
+      <div class="rnd">
+        <div class="rnd__no">ROUND<b>02</b></div>
+        <div class="rnd__img"><img src="p/1.webp" alt="황해 군도 서킷"></div>
+        <div class="rnd__name">황해 그랑프리 &lsquo;옐로 스프린트&rsquo;<em>YELLOW SPRINT · YELLOW SEA ARCHIPELAGO</em></div>
+        <div class="rnd__meta"><b>4월</b>간사지 난기류 · 스프린트</div>
+      </div>
+      <div class="rnd">
+        <div class="rnd__no">ROUND<b>03</b></div>
+        <div class="rnd__img"><img src="p/2.webp" alt="상하이 도심 협곡"></div>
+        <div class="rnd__name">상하이 그랑프리 &lsquo;네온 캐니언&rsquo;<em>NEON CANYON · SHANGHAI CITY</em></div>
+        <div class="rnd__meta"><b>5월</b>빌딩풍 · 시야 교란</div>
+      </div>
+      <div class="rnd">
+        <div class="rnd__no">ROUND<b>04</b></div>
+        <div class="rnd__img"><img src="p/3.webp" alt="오키나와 열도"></div>
+        <div class="rnd__name">오키나와 그랑프리 &lsquo;아일랜드 홉&rsquo;<em>ISLAND HOP · OKINAWA ISLANDS</em></div>
+        <div class="rnd__meta"><b>6월</b>연속 선회 · 에너지 관리</div>
+      </div>
+      <div class="rnd">
+        <div class="rnd__no">ROUND<b>05</b></div>
+        <div class="rnd__img"><img src="p/4.webp" alt="후지 산악"></div>
+        <div class="rnd__name">후지 그랑프리 &lsquo;카자마츠리&rsquo;<em>KAZAMATSURI · MT. FUJI HIGHLAND</em></div>
+        <div class="rnd__meta"><b>7월</b>상승기류 · 화산재</div>
+      </div>
+      <div class="rnd">
+        <div class="rnd__no">ROUND<b>06</b></div>
+        <div class="rnd__img"><img src="p/5.webp" alt="고비 사막"></div>
+        <div class="rnd__name">고비 그랑프리 &lsquo;더스트 라인&rsquo;<em>DUST LINE · GOBI DESERT</em></div>
+        <div class="rnd__meta"><b>8월</b>저공 직선 · 모래폭풍</div>
+      </div>
+      <div class="rnd rnd--final">
+        <div class="rnd__no">FINAL<b>07</b></div>
+        <div class="rnd__img"><img src="p/6.webp" alt="동해 공해상"></div>
+        <div class="rnd__name">최종전 &lsquo;아시안 어센션&rsquo;<em>ASIAN ASCENSION · EAST SEA OPEN WATER</em></div>
+        <div class="rnd__meta"><b>9월</b>시즌 챔피언 · 월드 승격 결정</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 로스터 -->
-<section class="sec sec--alt" id="roster">
-  <div class="sec__wrap">
-    <p class="sec__label">04 — THE GRID</p>
-    <h2>다섯 팀, 아홉 에이스</h2>
-    <p class="sec__sub">각 팀은 한 명의 파일럿과 그 내면을 아는 유일한 사람, 전담 치프로 이루어진다.</p>
+<!-- ══════════ 참가 팀 (아이콘 → 모달) ══════════ -->
+<section class="sec sec--alt" id="teams">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>참가 팀</h2><span class="en">COMPETITORS</span><span class="more">5 TEAMS · 10 CREW</span>
+    </div>
+    <div class="teams">
 
-    <!-- 18전비 -->
-    <article class="team" style="--tc:#39d98a">
-      <div class="team__head"><h3>대한민국 공군 제18전투비행단</h3><span>KF-21 보라매 · 당신의 팀</span></div>
-      <div class="team__body">
-        <div class="jet"><img src="j/0.webp" alt="KF-21 보라매" loading="lazy"><span>KF-21 보라매</span></div>
-        <div class="chars">
-          <div class="pc">
-            <div class="pc__t"><h4>권유진 <b>치프 엔지니어</b></h4><p class="pc__m">25세 · 성별은 당신의 반대</p><p class="pc__h">당신이 추락하는 꿈을 매일 밤 꾼다. 그래서 세팅에 목숨을 건다.</p></div>
-            <div class="pc__imgs">
-              <img src="c/0/0/0.webp" alt="권유진(여성) · 경기" loading="lazy">
-              <img src="c/0/1/0.webp" alt="권유진(여성) · 공식" loading="lazy">
-              <img src="c/0/2/0.webp" alt="권유진(여성) · 일상" loading="lazy">
-              <img src="c/1/0/0.webp" alt="권유진(남성) · 경기" loading="lazy">
-              <img src="c/1/1/0.webp" alt="권유진(남성) · 공식" loading="lazy">
-              <img src="c/1/2/0.webp" alt="권유진(남성) · 일상" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+      <button class="tcard tcard--tbd" data-team="t0" aria-haspopup="dialog">
+        <span class="tlogo"><img src="t/0.webp" alt=""></span>
+        <span class="tcard__name">제18전투비행단<span class="tcard__sub">ROKAF · 18th FW</span></span>
+        <span class="tcard__tag">대한민국 공군의 KF-21 최초 실전 운용 부대. 이번 시즌 신규 등록.</span>
+        <span class="tcard__go">팀 정보 →</span>
+      </button>
 
-    <!-- 11전비 -->
-    <article class="team" style="--tc:#e0484d">
-      <div class="team__head"><h3>대한민국 공군 제11전투비행단</h3><span>F-15K 슬램이글</span></div>
-      <div class="team__body">
-        <div class="jet"><img src="j/1.webp" alt="F-15K 슬램이글" loading="lazy"><span>F-15K 슬램이글</span></div>
-        <div class="chars">
-          <div class="pc">
-            <div class="pc__t"><h4>강태산 <b>파일럿 · Anvil</b></h4><p class="pc__m">35세 · 남성</p><p class="pc__h">후배를 부수는 건, 자신을 꺾을 누군가를 기다리기 때문이다.</p></div>
-            <div class="pc__imgs">
-              <img src="c/2/0/0.webp" alt="강태산 · 경기" loading="lazy">
-              <img src="c/2/1/0.webp" alt="강태산 · 공식" loading="lazy">
-              <img src="c/2/2/0.webp" alt="강태산 · 일상" loading="lazy">
-            </div>
-          </div>
-          <div class="pc">
-            <div class="pc__t"><h4>박정화 <b>치프 엔지니어</b></h4><p class="pc__m">38세 · 여성</p><p class="pc__h">팀의 웃음을 지키는 사람 — 정작 누구도 그녀의 속은 모른다.</p></div>
-            <div class="pc__imgs">
-              <img src="c/3/0/0.webp" alt="박정화 · 경기" loading="lazy">
-              <img src="c/3/1/0.webp" alt="박정화 · 공식" loading="lazy">
-              <img src="c/3/2/0.webp" alt="박정화 · 일상" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+      <button class="tcard" data-team="t1" aria-haspopup="dialog">
+        <span class="tlogo"><img src="t/1.webp" alt=""></span>
+        <span class="tcard__name">제11전투비행단<span class="tcard__sub">ROKAF · 11th FW</span></span>
+        <span class="tcard__tag">대한민국 공군 최대 규모 전투비행단. 창설 시즌부터 전 라운드 참가.</span>
+        <span class="tcard__go">팀 정보 →</span>
+      </button>
 
-    <!-- 미해군 -->
-    <article class="team" style="--tc:#d4a017">
-      <div class="team__head"><h3>미 해군 VFA-27 ‘로열 메이시스’</h3><span>F/A-18E 슈퍼 호넷 · 제7함대</span></div>
-      <div class="team__body">
-        <div class="jet"><img src="j/2.webp" alt="F/A-18E 슈퍼 호넷" loading="lazy"><span>F/A-18E 슈퍼 호넷</span></div>
-        <div class="chars">
-          <div class="pc">
-            <div class="pc__t"><h4>잭 밀러 <b>파일럿 · Roulette</b></h4><p class="pc__m">28세 · 남성</p><p class="pc__h">가장 크게 웃는 남자. 그 웃음이 언제부터 가짜였는지 아무도 모른다.</p></div>
-            <div class="pc__imgs">
-              <img src="c/4/0/0.webp" alt="잭 밀러 · 경기" loading="lazy">
-              <img src="c/4/1/0.webp" alt="잭 밀러 · 공식" loading="lazy">
-              <img src="c/4/2/0.webp" alt="잭 밀러 · 일상" loading="lazy">
-            </div>
-          </div>
-          <div class="pc">
-            <div class="pc__t"><h4>사라 젠킨스 <b>치프 엔지니어</b></h4><p class="pc__m">32세 · 여성</p><p class="pc__h">그를 지옥에서 끌어낸 단 한 사람 — 그래서 그의 거짓 웃음을 안다.</p></div>
-            <div class="pc__imgs">
-              <img src="c/5/0/0.webp" alt="사라 젠킨스 · 경기" loading="lazy">
-              <img src="c/5/1/0.webp" alt="사라 젠킨스 · 공식" loading="lazy">
-              <img src="c/5/2/0.webp" alt="사라 젠킨스 · 일상" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+      <button class="tcard" data-team="t2" aria-haspopup="dialog">
+        <span class="tlogo"><img src="t/2.webp" alt=""></span>
+        <span class="tcard__name">제27타격전투비행대대<span class="tcard__sub">US NAVY · VFA-27</span></span>
+        <span class="tcard__tag">미 해군 제7함대 전진 배치 대대. 유일한 항모 기반 참가 팀.</span>
+        <span class="tcard__go">팀 정보 →</span>
+      </button>
 
-    <!-- 항자대 -->
-    <article class="team" style="--tc:#e8536b">
-      <div class="team__head"><h3>일본 항공자위대 제8항공단</h3><span>미츠비시 F-2 · 제6비행대</span></div>
-      <div class="team__body">
-        <div class="jet"><img src="j/3.webp" alt="미츠비시 F-2" loading="lazy"><span>미츠비시 F-2</span></div>
-        <div class="chars">
-          <div class="pc">
-            <div class="pc__t"><h4>류자키 린 <b>파일럿 · Orochi</b></h4><p class="pc__m">28세 · 여성 · 디펜딩 챔피언</p><p class="pc__h">한 번도 진 적 없는 천재. 그래서 텅 비어 있다.</p></div>
-            <div class="pc__imgs">
-              <img src="c/6/0/0.webp" alt="류자키 린 · 경기" loading="lazy">
-              <img src="c/6/1/0.webp" alt="류자키 린 · 공식" loading="lazy">
-              <img src="c/6/2/0.webp" alt="류자키 린 · 일상" loading="lazy">
-            </div>
-          </div>
-          <div class="pc">
-            <div class="pc__t"><h4>사토미 유우 <b>치프 엔지니어</b></h4><p class="pc__m">29세 · 남성</p><p class="pc__h">그녀의 위험한 집착을 알면서도, 침묵하는 공범.</p></div>
-            <div class="pc__imgs">
-              <img src="c/7/0/0.webp" alt="사토미 유우 · 경기" loading="lazy">
-              <img src="c/7/1/0.webp" alt="사토미 유우 · 공식" loading="lazy">
-              <img src="c/7/2/0.webp" alt="사토미 유우 · 일상" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+      <button class="tcard" data-team="t3" aria-haspopup="dialog">
+        <span class="tlogo"><img src="t/3.webp" alt=""></span>
+        <span class="tcard__name">제8항공단 제6비행대<span class="tcard__sub">JASDF · 6th SQ</span></span>
+        <span class="tcard__tag">일본 항공자위대 요격 주력 비행대. 시리즈 통산 최다 우승.</span>
+        <span class="tcard__go">팀 정보 →</span>
+      </button>
 
-    <!-- PLAAF -->
-    <article class="team" style="--tc:#e6b422">
-      <div class="team__head"><h3>중국 인민해방군 공군 제1항공여단</h3><span>J-20 웨이룽</span></div>
-      <div class="team__body">
-        <div class="jet"><img src="j/4.webp" alt="J-20 웨이룽" loading="lazy"><span>J-20 웨이룽</span></div>
-        <div class="chars">
-          <div class="pc">
-            <div class="pc__t"><h4>리 슈에 <b>파일럿 · Mantis</b></h4><p class="pc__m">29세 · 여성</p><p class="pc__h">국가가 만든 완벽한 병기 — 그녀가 원한 건 자유였다.</p></div>
-            <div class="pc__imgs">
-              <img src="c/8/0/0.webp" alt="리 슈에 · 경기" loading="lazy">
-              <img src="c/8/1/0.webp" alt="리 슈에 · 공식" loading="lazy">
-              <img src="c/8/2/0.webp" alt="리 슈에 · 일상" loading="lazy">
-            </div>
-          </div>
-          <div class="pc">
-            <div class="pc__t"><h4>첸 레이 <b>치프 엔지니어</b></h4><p class="pc__m">31세 · 남성</p><p class="pc__h">부품처럼 사람을 다루면서도, 단 한 사람의 환멸만은 못 본 척한다.</p></div>
-            <div class="pc__imgs">
-              <img src="c/9/0/0.webp" alt="첸 레이 · 경기" loading="lazy">
-              <img src="c/9/1/0.webp" alt="첸 레이 · 공식" loading="lazy">
-              <img src="c/9/2/0.webp" alt="첸 레이 · 일상" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+      <button class="tcard" data-team="t4" aria-haspopup="dialog">
+        <span class="tlogo"><img src="t/4.webp" alt=""></span>
+        <span class="tcard__name">제1항공여단<span class="tcard__sub">PLAAF · 1st AIR BDE</span></span>
+        <span class="tcard__tag">중국 인민해방군 공군 최초의 J-20 실전 배치 여단.</span>
+        <span class="tcard__go">팀 정보 →</span>
+      </button>
 
+    </div>
   </div>
 </section>
 
+<!-- ══════════ 규정 ══════════ -->
+<section class="sec" id="regs">
+  <div class="wrap">
+    <div class="sec__head"><h2>경기 규정</h2><span class="en">AERO REGULATIONS</span></div>
+    <p class="regs__lead">
+      5세대 스텔스기와 4세대기가 정면으로 붙으면 승부는 이륙 전에 끝나 있습니다.
+      APEX 그랑프리는 그 격차를 지우기 위해 모든 참가기에 세 개의 족쇄를 채웁니다.
+      기체가 아니라 사람이 이기게 만드는 것 — 그것이 이 리그의 유일한 설계 목표입니다.
+    </p>
+    <div class="regs">
+      <div class="reg">
+        <p class="reg__code">AGWR</p>
+        <p class="reg__full">Adaptive G&ndash;Wingload Regulation</p>
+        <p>모든 기체에 통제 포드가 강제됩니다. 중량과 익면적을 실시간 계산해 최대 G를
+          소프트웨어로 눌러 버립니다. 추력은 제한하지 않으므로 직선에서 앞서는 기체일수록
+          코너 진입 속도를 스스로 죽여야 합니다. 남는 승부처는 에너지 관리뿐입니다.</p>
+      </div>
+      <div class="reg">
+        <p class="reg__code">TCE</p>
+        <p class="reg__full">Theater Communications Embargo</p>
+        <p>경기장 전역에 광대역 재밍이 쏟아집니다. 관제 채널 하나를 뺀 모든 데이터링크와
+          자동 조준이 마비되고, 파일럿에게 남는 유일한 데이터는 치프 엔지니어의 목소리입니다.
+          재밍 강도가 오르면 그 목소리마저 노이즈에 잠깁니다.</p>
+      </div>
+      <div class="reg">
+        <p class="reg__code">VEIL</p>
+        <p class="reg__full">Vision&ndash;Enforced Instrument Lockout</p>
+        <p>센서 퓨전이 무력화됩니다. 아날로그 계기와 공간각, 캐노피 밖을 직접 보는 두 눈만으로
+          가상 대공망을 피하고 지정 타겟을 무력화해야 합니다. 봉인 훼손은 즉시 실격입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 푸터 ══════════ -->
 <footer class="foot">
-  <p>APEX 그랑프리 시리즈 · 세계관 아카이브</p>
+  <div class="wrap foot__in">
+    <span class="brand brand--sm">
+      <span class="brand__word" aria-label="APEX"><svg class="brand__slash" viewBox="0 0 157 275" aria-hidden="true"><use href="#apexSlash"></use></svg><svg class="brand__a" viewBox="0 0 292 275" aria-hidden="true"><use href="#apexA"></use></svg>PEX</span>
+      <span class="brand__lock">GRAND<br>PRIX</span>
+    </span>
+    <p>APEX GRAND PRIX ASIA SERIES 공식 사이트.<br>
+       경기 일정과 규정은 사무국 공지에 따라 변경될 수 있습니다.</p>
+    <p class="disc">
+      이 사이트는 크랙 롤플레이 스토리<br>
+      &lsquo;APEX 그랑프리 아시아&rsquo;의 세계관 자료입니다.<br>
+      실존하는 대회·단체와 무관합니다.
+    </p>
+  </div>
 </footer>
 
-</main>
-<script src="js/app.js"></script>
+<!-- ══════════ 팀 모달 ══════════ -->
+<dialog class="tmodal" id="tmodal" aria-label="팀 정보">
+  <div class="tmodal__in">
+    <div class="tmodal__hd" id="tmHd"></div>
+    <div class="tmodal__bd" id="tmBd"></div>
+  </div>
+</dialog>
+
+<!-- 모달 내용 원본. 인물 썸네일은 경기복(의=0) 기준이며, 아래 3종 스트립은 경기/공식/일상. -->
+<template id="t0">
+  <p class="mtitle">팀 기록 <span>TEAM RECORD</span></p>
+  <dl class="stats">
+    <div class="stat"><dt>소속국</dt><dd>대한민국 <em>KOR</em></dd></div>
+    <div class="stat"><dt>등록 시즌</dt><dd>이번 시즌</dd></div>
+    <div class="stat"><dt>시리즈 우승</dt><dd>0</dd></div>
+    <div class="stat"><dt>라운드 우승</dt><dd>0</dd></div>
+    <div class="stat"><dt>포디움</dt><dd>0</dd></div>
+    <div class="stat"><dt>폴포지션</dt><dd>0</dd></div>
+    <div class="stat"><dt>지난 시즌</dt><dd>미참가 <em>&mdash;</em></dd></div>
+    <div class="stat"><dt>홈 라운드</dt><dd>R1 코리아</dd></div>
+  </dl>
+  <p class="mtitle">기체 <span>MACHINE</span></p>
+  <div class="jetshot"><img src="j/0.webp" alt="KF-21 보라매"></div>
+  <dl class="stats">
+    <div class="stat"><dt>형식</dt><dd>KF-21 보라매</dd></div>
+    <div class="stat"><dt>제작</dt><dd>한국항공우주산업</dd></div>
+    <div class="stat"><dt>세대</dt><dd>5세대</dd></div>
+    <div class="stat"><dt>구성</dt><dd>단좌 · 쌍발</dd></div>
+    <div class="stat stat--wide"><dt>특성</dt><dd>리그 첫 참전. 실전 데이터 없음</dd></div>
+  </dl>
+  <p class="mtitle">크루 <span>CREW</span></p>
+  <div class="person__hd"><span class="qm qm--lg">?</span>
+    <div><p class="person__role">PILOT</p><b>???</b><span>미등록</span></div></div>
+  <dl class="stats">
+    <div class="stat"><dt>나이</dt><dd>&mdash;</dd></div>
+    <div class="stat"><dt>출전</dt><dd>0</dd></div>
+    <div class="stat"><dt>콜사인</dt><dd>미등록</dd></div>
+    <div class="stat"><dt>등록</dt><dd>개막전 예정</dd></div>
+  </dl>
+  <div class="person__hd" style="margin-top:1.2rem"><span class="qm qm--lg">?</span>
+    <div><p class="person__role">CHIEF ENGINEER</p><b>???</b><span>미등록</span></div></div>
+  <dl class="stats">
+    <div class="stat"><dt>나이</dt><dd>&mdash;</dd></div>
+    <div class="stat"><dt>담당</dt><dd>18전비 1호기</dd></div>
+  </dl>
+  <p class="tbdnote">크루 명단은 개막전 그리드에서 공개됩니다.</p>
+</template>
+
+<template id="t1">
+  <p class="mtitle">팀 기록 <span>TEAM RECORD</span></p>
+  <dl class="stats">
+    <div class="stat"><dt>소속국</dt><dd>대한민국 <em>KOR</em></dd></div>
+    <div class="stat"><dt>등록 시즌</dt><dd>창설 시즌</dd></div>
+    <div class="stat"><dt>시리즈 우승</dt><dd>1</dd></div>
+    <div class="stat"><dt>라운드 우승</dt><dd>4</dd></div>
+    <div class="stat"><dt>포디움</dt><dd>12</dd></div>
+    <div class="stat"><dt>폴포지션</dt><dd>2</dd></div>
+    <div class="stat"><dt>지난 시즌</dt><dd>4위 <em>71pt</em></dd></div>
+    <div class="stat"><dt>홈 라운드</dt><dd>R1 코리아</dd></div>
+  </dl>
+  <p class="mtitle">기체 <span>MACHINE</span></p>
+  <div class="jetshot"><img src="j/1.webp" alt="F-15K 슬램이글"></div>
+  <dl class="stats">
+    <div class="stat"><dt>형식</dt><dd>F-15K 슬램이글</dd></div>
+    <div class="stat"><dt>제작</dt><dd>보잉</dd></div>
+    <div class="stat"><dt>세대</dt><dd>4.5세대</dd></div>
+    <div class="stat"><dt>구성</dt><dd>복좌 · 쌍발</dd></div>
+    <div class="stat stat--wide"><dt>특성</dt><dd>고중량 기체 · 직선 가속과 제동 안정성</dd></div>
+  </dl>
+  <p class="mtitle">파일럿 <span>PILOT</span></p>
+  <div class="person__hd"><img src="c/2/0/0.webp" alt="강태산">
+    <div><p class="person__role">PILOT</p><b>강태산</b><span>&lsquo;ANVIL&rsquo; · KOR</span></div></div>
+  <dl class="stats">
+    <div class="stat"><dt>나이</dt><dd>35세</dd></div>
+    <div class="stat"><dt>출전</dt><dd>21전</dd></div>
+    <div class="stat"><dt>라운드 우승</dt><dd>4승</dd></div>
+    <div class="stat"><dt>포디움</dt><dd>12회</dd></div>
+    <div class="stat"><dt>폴포지션</dt><dd>2회</dd></div>
+    <div class="stat"><dt>시리즈 우승</dt><dd>1회 (S1)</dd></div>
+    <div class="stat stat--wide"><dt>주특기</dt><dd>파워 브레이킹</dd></div>
+  </dl>
+  <div class="looks">
+    <div class="look"><img src="c/2/0/0.webp" alt="강태산"><span>RACE</span></div>
+    <div class="look"><img src="c/2/1/0.webp" alt="강태산"><span>OFFICIAL</span></div>
+    <div class="look"><img src="c/2/2/0.webp" alt="강태산"><span>CASUAL</span></div>
+  </div>
+  <p class="mtitle">치프 엔지니어 <span>CHIEF ENGINEER</span></p>
+  <div class="person__hd"><img src="c/3/0/0.webp" alt="박정화">
+    <div><p class="person__role">CHIEF ENGINEER</p><b>박정화</b><span>정비반장 · KOR</span></div></div>
+  <dl class="stats">
+    <div class="stat"><dt>나이</dt><dd>38세</dd></div>
+    <div class="stat"><dt>담당</dt><dd>강태산</dd></div>
+    <div class="stat stat--wide"><dt>경력</dt><dd>야전 정비 18년</dd></div>
+  </dl>
+  <div class="looks">
+    <div class="look"><img src="c/3/0/0.webp" alt="박정화"><span>RACE</span></div>
+    <div class="look"><img src="c/3/1/0.webp" alt="박정화"><span>OFFICIAL</span></div>
+    <div class="look"><img src="c/3/2/0.webp" alt="박정화"><span>CASUAL</span></div>
+  </div>
+</template>
+
+<template id="t2">
+  <p class="mtitle">팀 기록 <span>TEAM RECORD</span></p>
+  <dl class="stats">
+    <div class="stat"><dt>소속국</dt><dd>미국 <em>USA</em></dd></div>
+    <div class="stat"><dt>등록 시즌</dt><dd>창설 시즌</dd></div>
+    <div class="stat"><dt>시리즈 우승</dt><dd>0</dd></div>
+    <div class="stat"><dt>라운드 우승</dt><dd>2</dd></div>
+    <div class="stat"><dt>포디움</dt><dd>14</dd></div>
+    <div class="stat"><dt>폴포지션</dt><dd>2</dd></div>
+    <div class="stat"><dt>지난 시즌</dt><dd>3위 <em>92pt</em></dd></div>
+    <div class="stat"><dt>홈 라운드</dt><dd>없음 · 전 라운드 원정</dd></div>
+  </dl>
+  <p class="mtitle">기체 <span>MACHINE</span></p>
+  <div class="jetshot"><img src="j/2.webp" alt="F/A-18E 슈퍼호넷"></div>
+  <dl class="stats">
+    <div class="stat"><dt>형식</dt><dd>F/A-18E 슈퍼호넷</dd></div>
+    <div class="stat"><dt>제작</dt><dd>보잉</dd></div>
+    <div class="stat"><dt>세대</dt><dd>4.5세대</dd></div>
+    <div class="stat"><dt>구성</dt><dd>단좌 · 함재기</dd></div>
+    <div class="stat stat--wide"><dt>특성</dt><dd>저속 안정성 · 공중급유 운용</dd></div>
+  </dl>
+  <p class="mtitle">파일럿 <span>PILOT</span></p>
+  <div class="person__hd"><img src="c/4/0/0.webp" alt="잭 밀러">
+    <div><p class="person__role">PILOT</p><b>잭 밀러</b><span>&lsquo;ROULETTE&rsquo; · USA</span></div></div>
+  <dl class="stats">
+    <div class="stat"><dt>나이</dt><dd>28세</dd></div>
+    <div class="stat"><dt>출전</dt><dd>21전</dd></div>
+    <div class="stat"><dt>라운드 우승</dt><dd>2승</dd></div>
+    <div class="stat"><dt>포디움</dt><dd>14회</dd></div>
+    <div class="stat"><dt>폴포지션</dt><dd>2회</dd></div>
+    <div class="stat"><dt>시리즈 우승</dt><dd>없음</dd></div>
+    <div class="stat stat--wide"><dt>주특기</dt><dd>변칙 기동 · 공중급유</dd></div>
+  </dl>
+  <div class="looks">
+    <div class="look"><img src="c/4/0/0.webp" alt="잭 밀러"><span>RACE</span></div>
+    <div class="look"><img src="c/4/1/0.webp" alt="잭 밀러"><span>OFFICIAL</span></div>
+    <div class="look"><img src="c/4/2/0.webp" alt="잭 밀러"><span>CASUAL</span></div>
+  </div>
+  <p class="mtitle">치프 엔지니어 <span>CHIEF ENGINEER</span></p>
+  <div class="person__hd"><img src="c/5/0/0.webp" alt="사라 젠킨스">
+    <div><p class="person__role">CHIEF ENGINEER</p><b>사라 젠킨스</b><span>치프 엔지니어 · USA</span></div></div>
+  <dl class="stats">
+    <div class="stat"><dt>나이</dt><dd>32세</dd></div>
+    <div class="stat"><dt>담당</dt><dd>잭 밀러</dd></div>
+    <div class="stat stat--wide"><dt>경력</dt><dd>항모 덱크루 출신</dd></div>
+  </dl>
+  <div class="looks">
+    <div class="look"><img src="c/5/0/0.webp" alt="사라 젠킨스"><span>RACE</span></div>
+    <div class="look"><img src="c/5/1/0.webp" alt="사라 젠킨스"><span>OFFICIAL</span></div>
+    <div class="look"><img src="c/5/2/0.webp" alt="사라 젠킨스"><span>CASUAL</span></div>
+  </div>
+</template>
+
+<template id="t3">
+  <p class="mtitle">팀 기록 <span>TEAM RECORD</span></p>
+  <dl class="stats">
+    <div class="stat"><dt>소속국</dt><dd>일본 <em>JPN</em></dd></div>
+    <div class="stat"><dt>등록 시즌</dt><dd>창설 시즌</dd></div>
+    <div class="stat"><dt>시리즈 우승</dt><dd>2</dd></div>
+    <div class="stat"><dt>라운드 우승</dt><dd>12</dd></div>
+    <div class="stat"><dt>포디움</dt><dd>20</dd></div>
+    <div class="stat"><dt>폴포지션</dt><dd>13</dd></div>
+    <div class="stat"><dt>지난 시즌</dt><dd>1위 <em>175pt</em></dd></div>
+    <div class="stat"><dt>홈 라운드</dt><dd>R5 후지</dd></div>
+  </dl>
+  <p class="mtitle">기체 <span>MACHINE</span></p>
+  <div class="jetshot"><img src="j/3.webp" alt="미츠비시 F-2"></div>
+  <dl class="stats">
+    <div class="stat"><dt>형식</dt><dd>미츠비시 F-2</dd></div>
+    <div class="stat"><dt>제작</dt><dd>미츠비시 중공업</dd></div>
+    <div class="stat"><dt>세대</dt><dd>4.5세대</dd></div>
+    <div class="stat"><dt>구성</dt><dd>단좌 · 단발</dd></div>
+    <div class="stat stat--wide"><dt>특성</dt><dd>대면적 복합재 주익 · 선회 유지력</dd></div>
+  </dl>
+  <p class="mtitle">파일럿 <span>PILOT</span></p>
+  <div class="person__hd"><img src="c/6/0/0.webp" alt="류자키 린">
+    <div><p class="person__role">PILOT</p><b>류자키 린</b><span>&lsquo;OROCHI&rsquo; · JPN</span></div></div>
+  <dl class="stats">
+    <div class="stat"><dt>나이</dt><dd>28세</dd></div>
+    <div class="stat"><dt>출전</dt><dd>21전</dd></div>
+    <div class="stat"><dt>라운드 우승</dt><dd>12승</dd></div>
+    <div class="stat"><dt>포디움</dt><dd>20회</dd></div>
+    <div class="stat"><dt>폴포지션</dt><dd>13회</dd></div>
+    <div class="stat"><dt>시리즈 우승</dt><dd>2회 (S2·S3)</dd></div>
+    <div class="stat stat--wide"><dt>주특기</dt><dd>선회 유지 · 블로킹</dd></div>
+  </dl>
+  <div class="looks">
+    <div class="look"><img src="c/6/0/0.webp" alt="류자키 린"><span>RACE</span></div>
+    <div class="look"><img src="c/6/1/0.webp" alt="류자키 린"><span>OFFICIAL</span></div>
+    <div class="look"><img src="c/6/2/0.webp" alt="류자키 린"><span>CASUAL</span></div>
+  </div>
+  <p class="mtitle">치프 엔지니어 <span>CHIEF ENGINEER</span></p>
+  <div class="person__hd"><img src="c/7/0/0.webp" alt="사토미 유우">
+    <div><p class="person__role">CHIEF ENGINEER</p><b>사토미 유우</b><span>치프 엔지니어 · JPN</span></div></div>
+  <dl class="stats">
+    <div class="stat"><dt>나이</dt><dd>29세</dd></div>
+    <div class="stat"><dt>담당</dt><dd>류자키 린</dd></div>
+    <div class="stat stat--wide"><dt>경력</dt><dd>기체 정비 자격 1급</dd></div>
+  </dl>
+  <div class="looks">
+    <div class="look"><img src="c/7/0/0.webp" alt="사토미 유우"><span>RACE</span></div>
+    <div class="look"><img src="c/7/1/0.webp" alt="사토미 유우"><span>OFFICIAL</span></div>
+    <div class="look"><img src="c/7/2/0.webp" alt="사토미 유우"><span>CASUAL</span></div>
+  </div>
+</template>
+
+<template id="t4">
+  <p class="mtitle">팀 기록 <span>TEAM RECORD</span></p>
+  <dl class="stats">
+    <div class="stat"><dt>소속국</dt><dd>중국 <em>CHN</em></dd></div>
+    <div class="stat"><dt>등록 시즌</dt><dd>창설 시즌</dd></div>
+    <div class="stat"><dt>시리즈 우승</dt><dd>0</dd></div>
+    <div class="stat"><dt>라운드 우승</dt><dd>3</dd></div>
+    <div class="stat"><dt>포디움</dt><dd>17</dd></div>
+    <div class="stat"><dt>폴포지션</dt><dd>4</dd></div>
+    <div class="stat"><dt>지난 시즌</dt><dd>2위 <em>118pt</em></dd></div>
+    <div class="stat"><dt>홈 라운드</dt><dd>R3 상하이</dd></div>
+  </dl>
+  <p class="mtitle">기체 <span>MACHINE</span></p>
+  <div class="jetshot"><img src="j/4.webp" alt="J-20 웨이룽"></div>
+  <dl class="stats">
+    <div class="stat"><dt>형식</dt><dd>J-20 웨이룽</dd></div>
+    <div class="stat"><dt>제작</dt><dd>청두항공기공업</dd></div>
+    <div class="stat"><dt>세대</dt><dd>5세대</dd></div>
+    <div class="stat"><dt>구성</dt><dd>단좌 · 쌍발</dd></div>
+    <div class="stat stat--wide"><dt>특성</dt><dd>카나드 델타 · 전자전 운용 폭</dd></div>
+  </dl>
+  <p class="mtitle">파일럿 <span>PILOT</span></p>
+  <div class="person__hd"><img src="c/8/0/0.webp" alt="리 슈에">
+    <div><p class="person__role">PILOT</p><b>리 슈에</b><span>&lsquo;MANTIS&rsquo; · CHN</span></div></div>
+  <dl class="stats">
+    <div class="stat"><dt>나이</dt><dd>29세</dd></div>
+    <div class="stat"><dt>출전</dt><dd>21전</dd></div>
+    <div class="stat"><dt>라운드 우승</dt><dd>3승</dd></div>
+    <div class="stat"><dt>포디움</dt><dd>17회</dd></div>
+    <div class="stat"><dt>폴포지션</dt><dd>4회</dd></div>
+    <div class="stat"><dt>시리즈 우승</dt><dd>없음</dd></div>
+    <div class="stat stat--wide"><dt>주특기</dt><dd>재밍 환경 랠리</dd></div>
+  </dl>
+  <div class="looks">
+    <div class="look"><img src="c/8/0/0.webp" alt="리 슈에"><span>RACE</span></div>
+    <div class="look"><img src="c/8/1/0.webp" alt="리 슈에"><span>OFFICIAL</span></div>
+    <div class="look"><img src="c/8/2/0.webp" alt="리 슈에"><span>CASUAL</span></div>
+  </div>
+  <p class="mtitle">치프 엔지니어 <span>CHIEF ENGINEER</span></p>
+  <div class="person__hd"><img src="c/9/0/0.webp" alt="첸 레이">
+    <div><p class="person__role">CHIEF ENGINEER</p><b>첸 레이</b><span>운용 총괄 · CHN</span></div></div>
+  <dl class="stats">
+    <div class="stat"><dt>나이</dt><dd>31세</dd></div>
+    <div class="stat"><dt>담당</dt><dd>리 슈에</dd></div>
+    <div class="stat stat--wide"><dt>경력</dt><dd>비행대 운용 지휘</dd></div>
+  </dl>
+  <div class="looks">
+    <div class="look"><img src="c/9/0/0.webp" alt="첸 레이"><span>RACE</span></div>
+    <div class="look"><img src="c/9/1/0.webp" alt="첸 레이"><span>OFFICIAL</span></div>
+    <div class="look"><img src="c/9/2/0.webp" alt="첸 레이"><span>CASUAL</span></div>
+  </div>
+</template>
+
+<div class="lb" id="lb" role="dialog" aria-label="이미지 확대"><img src="" alt=""></div>
+<script src="js/site.js"></script>
 </body>
 </html>
